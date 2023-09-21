@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UW Uploader</title>
+    <link rel="stylesheet" href="New_style.css">
+    <link rel="shortcut icon" type="x-icon" href="Tab_Icon.png">
+    <script type="module">
+        import * as LR from "https://cdn.jsdelivr.net/npm/@uploadcare/blocks@0.25.0/web/lr-file-uploader-regular.min.js";
+    
+        LR.registerBlocks(LR);
+    </script>
+</head>
+<body>
+   
+    <nav>
+        <div class="content">
+            <div class="logo">
+                <img src="Tab_Icon.png" alt="logo">
+                <span>Uploader.</span>
+            </div>
+        </div>
+    </nav>
+
+    <section>
+        <div class="container">
+            <div class="box boxB">
+                <h3>Documents</h3>
+                <br>
+                <hr>
+                <br>
+                <div class="list">
+                    <ul>
+                        <li>Passport <span>*</span></li>
+                        <li>Birth certificate <span>*</span></li>
+                        <li>Diploma/certificate <span>*</span></li>
+                        <li>Transcript <span>*</span></li>
+                        <li>Photo <span>*</span></li>
+                        <li>English Evidence(Optional)</li>
+                    </ul>
+                </div>
+                <br>
+
+                <p>* All the documents should provide in original and official translation.(Max size : 5Mb)*</p>
+                <br>
+                <p class="tick">Please wait for GREEN TICK(✅) after upload.</p>
+                <p>🔽</p>
+
+                    <div class="uploader">
+                        <lr-config
+                                ctx-name="my-uploader"
+                                pubkey="06f9e403c0dfad43819d"
+                                max-local-file-size-bytes="5000000"
+                                multiple-max="13"
+                                img-only="true"
+                            ></lr-config>
+                        
+                            <lr-file-uploader-minimal
+                                    css-src="https://cdn.jsdelivr.net/npm/@uploadcare/blocks@0.25.0/web/lr-file-uploader-minimal.min.css"
+                                    ctx-name="my-uploader"
+                                    class="my-config"
+                                    >
+                            </lr-file-uploader-minimal>
+                    </div>
+                </div>
+
+                <div class="box boxF">
+                    <h3>Profile</h3>
+                    <br>
+                    <hr>
+                    <br>
+                            <form
+                                action="https://formspree.io/f/xvojrvkw"
+                                method="POST"
+                                >
+                                    <input type="text" name="Fname" placeholder="First name" required>
+                                    <input type="text" name="Lname" placeholder="Last name" required>
+                                    <input type="text" name="Birth Date" placeholder="Birth Date" required>
+                                    <input type="number" name="Age" placeholder="Age" required>
+                                    <input type="text" name="Gender" placeholder="Gender" required>
+                                    <input type="text" name="Father Name" placeholder="Father Name" required>
+                                    <input type="text" name="Mother Name" placeholder="Mother Name" required>
+                                    <input type="text" name="Passport No." placeholder="Passport No." required>
+                                    <input type="text" name="Place Of Birth" placeholder="Place Of Birth" required>
+                                    <input type="text" name="Country" placeholder="Country" required>
+                                    <input type="text" name="City" placeholder="City" required>
+                                    <input type="text" name="Phone" placeholder="Phone" required>
+                                    <input type="text" name="Address" placeholder="Address" required>
+                                    <input type="email" name="Email" placeholder="Email" required>
+    
+                                
+                                <button type="submit">Submit</button>
+    
+                                <script>
+                                    window.onbeforeunload = () => {
+                                        for(const form of document.getElementsByTagName('form')) {
+                                            form.reset();
+                                        }
+                                    }
+                                </script>
+    
+                            </form>
+
+                </div>
+
+
+            </div>
+
+    </section>
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <!-- <section>
+        <div class="container">
+            <div class="nav">
+                <div class="logo">
+                    <img src="Tab_Icon.png" alt="logo">
+                    <span>Uploader.</span>
+                </div>
+                <div class="icons">
+                    <img src="ciu_logo.png" alt="">
+                    <img src="EMU_logo.svg.png" alt="">
+                    <img src="neu-logo.png" alt="">
+                </div>
+            </div>
+
+            <div class="board">
+ 
+                    <div class="box documents">
+                            <h3>Documents</h3>
+                            <br>
+                            <hr>
+                            <br>
+                            <div class="list">
+                                <ul>
+                                    <li>Passport <span>*</span></li>
+                                    <li>Birth certificate <span>*</span></li>
+                                    <li>Diploma/certificate <span>*</span></li>
+                                    <li>Transcript <span>*</span></li>
+                                    <li>Photo <span>*</span></li>
+                                    <li>English Evidence(Optional)</li>
+                                </ul>
+                            </div>
+                            <br>
+
+                            <p>* All the documents should provide in original and official translation.(Max size : 5Mb)*</p>
+                            <br>
+                            <p class="tick">Please wait for GREEN TICK(✅) after upload.</p>
+                            <p>🔽</p>
+
+
+                            <div class="uploader">
+                                <lr-config
+                                        ctx-name="my-uploader"
+                                        pubkey="06f9e403c0dfad43819d"
+                                        max-local-file-size-bytes="5000000"
+                                        multiple-max="13"
+                                        img-only="true"
+                                    ></lr-config>
+                                
+                                    <lr-file-uploader-minimal
+                                            css-src="https://cdn.jsdelivr.net/npm/@uploadcare/blocks@0.25.0/web/lr-file-uploader-minimal.min.css"
+                                            ctx-name="my-uploader"
+                                            class="my-config"
+                                            >
+                                    </lr-file-uploader-minimal>
+                            </div>
+                         </div>  
+
+
+                         <div class="box profile">
+                            <div class="form">
+                                    <h3>Profile</h3>
+                                    <br>
+                                    <hr>
+                                    <br>
+                                <form
+                                action="https://formspree.io/f/xvojrvkw"
+                                method="POST"
+                                >
+                                    <input type="text" name="Fname" placeholder="First name" required>
+                                    <input type="text" name="Lname" placeholder="Last name" required>
+                                    <input type="text" name="Birth Date" placeholder="Birth Date" required>
+                                    <input type="number" name="Age" placeholder="Age" required>
+                                    <input type="text" name="Gender" placeholder="Gender" required>
+                                    <input type="text" name="Father Name" placeholder="Father Name" required>
+                                    <input type="text" name="Mother Name" placeholder="Mother Name" required>
+                                    <input type="text" name="Passport No." placeholder="Passport No." required>
+                                    <input type="text" name="Place Of Birth" placeholder="Place Of Birth" required>
+                                    <input type="text" name="Country" placeholder="Country" required>
+                                    <input type="text" name="City" placeholder="City" required>
+                                    <input type="text" name="Phone" placeholder="Phone" required>
+                                    <input type="text" name="Address" placeholder="Address" required>
+                                    <input type="email" name="Email" placeholder="Email" required>
+    
+                                
+                                <button type="submit">Submit</button>
+    
+                                <script>
+                                    window.onbeforeunload = () => {
+                                        for(const form of document.getElementsByTagName('form')) {
+                                            form.reset();
+                                        }
+                                    }
+                                </script>
+    
+                            </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </section> -->
+
+        <!-- <div class="socialmedia">
+            <a href="http://t.me/UniWest_group">
+                <div class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-telegram" viewBox="0 0 16 16">
+                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.287 5.906c-.778.324-2.334.994-4.666 2.01-.378.15-.577.298-.595.442-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294.26.006.549-.1.868-.32 2.179-1.471 3.304-2.214 3.374-2.23.05-.012.12-.026.166.016.047.041.042.12.037.141-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8.154 8.154 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629.093.06.183.125.27.187.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.426 1.426 0 0 0-.013-.315.337.337 0 0 0-.114-.217.526.526 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09z"/>
+                      </svg>
+                </div>
+            </a>
+        </div> -->
